@@ -25,3 +25,9 @@ h5,
 h6 {
   font-weight: normal;
 }
+
+@media only screen and (max-width: 960px) {
+  :root {
+    font-size: 14px;
+  }
+}
