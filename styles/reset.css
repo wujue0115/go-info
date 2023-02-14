@@ -1,0 +1,27 @@
+:root {
+  /* 標楷體 (windows: DFKai-sb, mac: BiauKai, linux: "AR PL UKai TW") */
+  --font-family: 標楷體, DFKai-sb, BiauKai, "AR PL UKai TW", sans-serif;
+
+  --primary-color: #181818;
+  --secondary-color: #272727;
+  --tertiary-color: #3f3f3f;
+
+  --font-color: #fff;
+  --line-height: 1.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}

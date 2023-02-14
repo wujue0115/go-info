@@ -1,0 +1,49 @@
+body {
+  line-height: var(--line-height);
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+$small-size: 960px;
+$medium-size: 1264px;
+$large-size: 1904px;
+@mixin rwd($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0 0 1.5rem;
+
+  @include rwd($small-size) {
+    padding: 0 0 1rem;
+  }
+}
+
+main {
+  padding: 2rem;
+  @include rwd($small-size) {
+    padding: 0;
+  }
+  section {
+    padding: 1rem;
+    h3 {
+      margin: 1rem 0 1rem;
+      font-size: 1.5rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #555;
+    }
+
+    ul {
+      margin-left: 2rem;
+    }
+  }
+}

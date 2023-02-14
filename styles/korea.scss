@@ -1,0 +1,75 @@
+body {
+  line-height: var(--line-height);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+$small-size: 960px;
+$medium-size: 1264px;
+$large-size: 1904px;
+@mixin rwd($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0 0 1.5rem;
+
+  @include rwd($small-size) {
+    padding: 0 0 1rem;
+  }
+}
+
+main {
+  padding: 2rem;
+  @include rwd($small-size) {
+    padding: 0;
+  }
+  p {
+    padding: 0.5rem 0;
+  }
+
+  section.top {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--tertiary-color);
+    @include rwd($small-size) {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  section.bottom {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--tertiary-color);
+    @include rwd($small-size) {
+      border: none;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    .player {
+      margin: 0.5rem 0;
+      padding: 0.5rem 0.5rem 0.5rem 0;
+      border-top: 1px solid var(--tertiary-color);
+
+      h4 {
+        padding: 0.5rem 0;
+        font-size: 1.25rem;
+      }
+      h5 {
+        font-size: 1.1rem;
+        margin: 0 0 0.75rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

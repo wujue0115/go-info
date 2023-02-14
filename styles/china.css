@@ -1,0 +1,54 @@
+body {
+  line-height: var(--line-height);
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0 0 1.5rem;
+}
+@media only screen and (max-width: 960px) {
+  p {
+    padding: 0 0 1rem;
+  }
+}
+
+main {
+  padding: 2rem;
+}
+@media only screen and (max-width: 960px) {
+  main {
+    padding: 0;
+  }
+}
+main section {
+  padding: 1rem;
+}
+main section h3 {
+  margin: 1rem 0 1rem;
+  font-size: 1.5rem;
+}
+main section h3:first-child {
+  margin-top: 0;
+}
+main section hr {
+  border: none;
+  border-top: 1px solid #555;
+}
+main section table {
+  min-width: 500px;
+  overflow-x: scroll;
+  border-collapse: collapse;
+}
+main section table tr th {
+  padding: 0.5rem 1rem;
+  border-top: 2px solid #fff;
+}
+main section table tr td {
+  padding: 0.25rem 1.25rem;
+  border-top: 1px solid #fff;
+}
+main section table tr:last-child td {
+  border-bottom: 2px solid #fff;
+}/*# sourceMappingURL=china.css.map */

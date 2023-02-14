@@ -1,0 +1,109 @@
+body {
+  line-height: var(--line-height);
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0 0 1.5rem;
+}
+@media only screen and (max-width: 960px) {
+  p {
+    padding: 0 0 1rem;
+  }
+}
+
+main {
+  padding: 2rem;
+}
+@media only screen and (max-width: 960px) {
+  main {
+    padding: 0;
+  }
+}
+main section.top {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 960px) {
+  main section.top {
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--tertiary-color);
+  }
+}
+main section.top .japan {
+  display: flex;
+}
+@media only screen and (max-width: 960px) {
+  main section.top .japan {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+main section.top .japan figure {
+  width: 500px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 960px) {
+  main section.top .japan figure {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+main section.top .japan figure img {
+  border-radius: 5px;
+  width: 100%;
+}
+main section.top .japan .info {
+  flex: 5 1 600px;
+}
+main section.top .japan .info ul {
+  margin-left: 2rem;
+}
+main section.top .japan .info ul li {
+  padding: 0.5rem 0;
+}
+main section.bottom {
+  padding: 1rem;
+  border-radius: 5px;
+}
+main section.bottom .competition {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.bottom .competition .text {
+  flex: 1 1 300px;
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 960px) {
+  main section.bottom .competition .text {
+    flex: none;
+    padding-bottom: 2rem;
+    width: 100%;
+    border-bottom: 1px solid var(--tertiary-color);
+  }
+}
+main section.bottom .competition .text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+main section.bottom .competition .text ul {
+  margin-left: 2rem;
+}
+main section.bottom .competition .text ul li {
+  padding: 0.5rem 0;
+}
+main section.bottom .competition #piechart {
+  flex: 1 1 500px;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 960px) {
+  main section.bottom .competition #piechart {
+    flex: none;
+    width: 100%;
+  }
+}/*# sourceMappingURL=japan.css.map */

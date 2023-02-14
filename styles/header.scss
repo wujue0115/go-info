@@ -1,0 +1,110 @@
+$small-size: 960px;
+$medium-size: 1264px;
+$large-size: 1904px;
+@mixin rwd($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+header {
+  height: 3.5rem;
+  padding: 1rem 3rem;
+  background: var(--secondary-color);
+  border-bottom: 1px solid var(--tertiary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-color);
+  @include rwd($small-size) {
+    padding: 1rem;
+  }
+  nav {
+    @include rwd($small-size) {
+      padding: 0;
+      position: fixed;
+      width: 100vw;
+      opacity: 0;
+      top: 3.5rem;
+      left: 0;
+      background: var(--primary-color);
+      transition: all 0.3s;
+    }
+    &.active {
+      opacity: 1;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      @include rwd($small-size) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        width: 100%;
+      }
+      li {
+        margin: 0 1rem;
+        @include rwd($small-size) {
+          margin: none;
+          width: 100%;
+        }
+        a {
+          padding: 0.5rem;
+          border-radius: 3px;
+          font-size: 1.25rem;
+          text-decoration: none;
+          transition: all 0.3s;
+          color: var(--font-color);
+          &:hover {
+            background-color: var(--tertiary-color);
+          }
+          &:active {
+            background-color: var(--primary-color);
+          }
+          &[href="#"] {
+            background-color: var(--tertiary-color);
+          }
+          @include rwd($small-size) {
+            margin: auto;
+            padding: 0.5rem 0;
+            display: block;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  #hamburger {
+    display: none;
+    width: 2rem;
+    cursor: pointer;
+    div {
+      margin: 6px auto;
+      width: 90%;
+      height: 2px;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: all 0.3s;
+    }
+
+    &.active {
+      > div {
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(-135deg);
+        }
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(135deg);
+        }
+      }
+    }
+
+    @include rwd($small-size) {
+      display: block;
+    }
+  }
+}
