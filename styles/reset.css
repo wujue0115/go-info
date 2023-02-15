@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Noto Serif TC Light";
+  src: url(../fonts/NotoSerifTC/NotoSerifTC-Light.otf);
+}
+
 :root {
   /* 標楷體 (windows: DFKai-sb, mac: BiauKai, linux: "AR PL UKai TW") */
-  --font-family: 標楷體, DFKai-sb, BiauKai, "AR PL UKai TW", sans-serif;
+  --font-family: "Noto Sans TC", 標楷體, DFKai-sb, BiauKai, "AR PL UKai TW",
+    sans-serif;
 
   --primary-color: #181818;
   --secondary-color: #272727;
@@ -28,6 +34,9 @@ h6 {
 
 @media only screen and (max-width: 960px) {
   :root {
-    font-size: 14px;
+    --font-family: "Noto Serif TC Light", 標楷體, DFKai-sb, BiauKai,
+      "AR PL UKai TW", sans-serif;
+    font-size: 12px;
+    font-weight: 100 !important;
   }
 }
