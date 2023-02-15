@@ -22,16 +22,16 @@ header {
   nav {
     @include rwd($small-size) {
       padding: 0;
+      display: none;
       position: fixed;
       width: 100vw;
-      opacity: 0;
       top: 3.5rem;
       left: 0;
       background: var(--primary-color);
       transition: all 0.3s;
     }
     &.active {
-      opacity: 1;
+      display: block;
     }
     ul {
       display: flex;
